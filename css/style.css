@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+}
+
+.encabezado {
+    background-color: #111820;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.encabezado h1 {
+    margin: 0;
+}
+
+.encabezado p {
+    margin: 5px 0 0;
+}
+
+.nav {
+    padding: 15px;
+    text-align: center;
+    background-color: #ffffff;
+    max-width: 1000px;
+    margin: 0 auto;
+    
+}
+.nav a {
+    margin: 0 10px;
+    color: #131313;
+    text-decoration: underline;
+}
+
+.nav a:hover {
+    color: #be0f75;
+}
+
+
+.lateral section nav a {
+    color: white;
+    text-decoration: underline;
+}
+
+.lateral section nav a:hover {
+    color: #be0f75;
+}
+
+.hoja-vida {
+    display: grid;
+    grid-template-columns: 35% 60%;
+    max-width: 1000px;
+    margin: 1px auto 0px;
+  
+    background-color: white;
+}
+
+.lateral {
+    background-color: #111820;
+    color: white;
+    padding: 25px;
+}
+
+.lateral img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+.lateral section {
+    margin-bottom: 30px;
+}
+
+.lateral h2 {
+    border-bottom: 5px solid white;
+    padding-bottom: 8px;
+}
+
+.contenido {
+    padding: 30px;
+}
+
+.contenido section {
+    margin-bottom: 30px;
+}
+
+.contenido h2 {
+    border-bottom: 5px solid #333;
+    padding-bottom: 20px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+article h3 {
+    margin-bottom: 5px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #282c31;
+    color: white;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
