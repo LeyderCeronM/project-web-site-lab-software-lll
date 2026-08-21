@@ -10,11 +10,12 @@ body {
 
 .encabezado {
     background-color: #111820;
-    color: white;
+    color: rgb(240, 124, 124);
     text-align: center;
     padding: 20px;
     max-width: 1000px;
     margin: 0 auto;
+
 }
 
 .encabezado h1 {
@@ -115,4 +116,5 @@ article h3 {
     margin: 0 auto;
 
 }
+
 
