@@ -124,3 +124,30 @@ body {
     color: #94a3b8;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+/* AJUSTES PARA PANTALLAS PEQUEÑAS (CELULARES) */
+@media (max-width: 768px) {
+    body {
+        height: auto; /* Permite que el contenido fluya */
+        overflow-y: auto; /* Permite desplazamiento vertical en celulares */
+    }
+
+    .hoja-vida {
+        grid-template-columns: 1fr; /* Cambia a 1 sola columna vertical */
+        height: auto;
+    }
+
+    .lateral {
+        height: 300px; /* Tamaño adecuado para la foto en cel */
+    }
+
+    .contenido-derecho {
+        min-height: 400px; /* Espacio para que los botones floten */
+        padding: 10px;
+    }
+
+    .btn-circulo {
+        width: 85px; /* Botones un poco más pequeños para pantallas reducidas */
+        height: 85px;
+        font-size: 0.75rem;
+    }
+}
