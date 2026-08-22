@@ -2,9 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const contenedor = document.getElementById("area-flotante");
     const botones = Array.from(document.querySelectorAll(".btn-circulo"));
 
-    // Guardar estado y velocidades iniciales
+    function obtenerRadio() {
+        // Si la pantalla es muy pequeña (móvil o móvil horizontal), esferas más chicas
+        if (window.innerWidth <= 768 || window.innerHeight <= 500) {
+            return 35; // 70px / 2
+        }
+        return 55; // 110px / 2 (PC)
+    }
+
     const objetos = botones.map((btn) => {
-        const radio = 55; // Mitad del ancho/alto (110px / 2)
+        let radio = obtenerRadio();
         let x = Math.random() * (contenedor.clientWidth - radio * 2) + radio;
         let y = Math.random() * (contenedor.clientHeight - radio * 2) + radio;
 
@@ -13,11 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let pausado = false;
 
-        // Pausar movimiento al pasar el cursor para poder hacer clic cómodamente
         btn.addEventListener("mouseenter", () => pausado = true);
         btn.addEventListener("mouseleave", () => pausado = false);
+        btn.addEventListener("touchstart", () => pausado = true);
+        btn.addEventListener("touchend", () => pausado = false);
 
-        return { element: btn, x, y, vx, vy, radio, get pausado() { return pausado; } };
+        return { element: btn, x, y, vx, vy, get radio() { return obtenerRadio(); }, get pausado() { return pausado; } };
     });
 
     function animar() {
@@ -26,36 +34,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
         for (let i = 0; i < objetos.length; i++) {
             let obj = objetos[i];
+            let r = obj.radio;
 
             if (!obj.pausado) {
                 obj.x += obj.vx;
                 obj.y += obj.vy;
 
-                // Rebotes con los límites de la caja
-                if (obj.x - obj.radio <= 0) {
-                    obj.x = obj.radio;
+                // Control de bordes
+                if (obj.x - r <= 0) {
+                    obj.x = r;
                     obj.vx *= -1;
-                } else if (obj.x + obj.radio >= cAncho) {
-                    obj.x = cAncho - obj.radio;
+                } else if (obj.x + r >= cAncho) {
+                    obj.x = cAncho - r;
                     obj.vx *= -1;
                 }
 
-                if (obj.y - obj.radio <= 0) {
-                    obj.y = obj.radio;
+                if (obj.y - r <= 0) {
+                    obj.y = r;
                     obj.vy *= -1;
-                } else if (obj.y + obj.radio >= cAlto) {
-                    obj.y = cAlto - obj.radio;
+                } else if (obj.y + r >= cAlto) {
+                    obj.y = cAlto - r;
                     obj.vy *= -1;
                 }
             }
 
-            // Detección de choque entre esferas
+            // Colisión entre esferas
             for (let j = i + 1; j < objetos.length; j++) {
                 let obj2 = objetos[j];
+                let r2 = obj2.radio;
                 let dx = obj2.x - obj.x;
                 let dy = obj2.y - obj.y;
                 let distancia = Math.sqrt(dx * dx + dy * dy);
-                let minDistancia = obj.radio + obj2.radio;
+                let minDistancia = r + r2;
 
                 if (distancia < minDistancia) {
                     let tempVx = obj.vx;
@@ -80,9 +90,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            // Renderizar la posición calculada
-            obj.element.style.left = `${obj.x - obj.radio}px`;
-            obj.element.style.top = `${obj.y - obj.radio}px`;
+            obj.element.style.left = `${obj.x - r}px`;
+            obj.element.style.top = `${obj.y - r}px`;
         }
 
         requestAnimationFrame(animar);

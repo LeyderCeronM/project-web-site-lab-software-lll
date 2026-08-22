@@ -124,30 +124,69 @@ body {
     color: #94a3b8;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-/* AJUSTES PARA PANTALLAS PEQUEÑAS (CELULARES) */
-@media (max-width: 768px) {
+
+/* AJUSTES PARA PANTALLAS PEQUEÑAS (CELULARES EN VERTICAL) */
+@media (max-width: 768px) and (orientation: portrait) {
     body {
-        height: auto; /* Permite que el contenido fluya */
-        overflow-y: auto; /* Permite desplazamiento vertical en celulares */
+        height: auto;
+        overflow-y: auto;
     }
 
     .hoja-vida {
-        grid-template-columns: 1fr; /* Cambia a 1 sola columna vertical */
+        display: flex;
+        flex-direction: column;
         height: auto;
     }
 
     .lateral {
-        height: 300px; /* Tamaño adecuado para la foto en cel */
+        height: 300px;
+        width: 100%;
     }
 
     .contenido-derecho {
-        min-height: 400px; /* Espacio para que los botones floten */
+        position: relative;
+        width: 100%;
+        height: 400px; /* Alto ajustado para celular vertical */
+        overflow: hidden;
         padding: 10px;
     }
 
     .btn-circulo {
-        width: 85px; /* Botones un poco más pequeños para pantallas reducidas */
-        height: 85px;
-        font-size: 0.75rem;
+        width: 75px;
+        height: 75px;
+        font-size: 0.7rem;
+    }
+}
+
+/* AJUSTES PARA CELULAR EN HORIZONTAL (LANDSCAPE) */
+@media (max-width: 932px) and (orientation: landscape) {
+    body {
+        height: auto;
+        overflow-y: auto; /* Permite bajar hasta el footer */
+    }
+
+    .hoja-vida {
+        display: grid;
+        grid-template-columns: 40% 60%; /* Mantiene 2 columnas pero adaptadas */
+        height: 100vh; /* Se adapta a la altura del celular horizontal */
+        min-height: 320px;
+    }
+
+    .lateral {
+        height: 100%;
+        width: 100%;
+    }
+
+    .contenido-derecho {
+        position: relative;
+        width: 100%;
+        height: 100%; /* Toma la altura disponible para que no se corten */
+        overflow: hidden;
+    }
+
+    .btn-circulo {
+        width: 65px; /* Pelotas más pequeñas para que quepan en poca altura */
+        height: 65px;
+        font-size: 0.65rem;
     }
 }
