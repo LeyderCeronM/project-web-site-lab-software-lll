@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0b131e;
+    color: #e2e8f0;
+}
+.encabezado {
+    background-color: #111d2c;
+    color: #f43f5e;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 2px solid #3ff448;
+}
+.contenedor {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.tarjeta {
+    background: #162436;
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border: 1px solid #3ff448;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+.img-tarjeta {
+    width: 250px;
+    object-fit: cover;
+}
+.info {
+    padding: 20px;
+}
+.info h2 {
+    color: #f43f5e;
+    margin-top: 0;
+}
+.info p {
+    
+    line-height: 1.6;
+}
+.btn-volver {
+    display: inline-block;
+    color: #f43f5e;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #f43f5e;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.btn-volver:hover {
+    background: #f43f5e;
+    color: #fff;
+}
+.volver { text-align: center; margin-top: 30px; }

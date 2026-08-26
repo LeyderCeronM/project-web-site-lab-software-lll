@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a0f07;
+    color: #faebd7;
+}
+.encabezado {
+    background-color: #2b190d;
+    color: #f97316;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 2px solid #f97316;
+}
+.contenedor { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.plato {
+    background: #3b2414;
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid #f97316;
+}
+.plato img { width: 220px; object-fit: cover; }
+.info-plato { padding: 20px; }
+.info-plato h2 { color: #f97316; margin-top: 0; }
+.btn-volver {
+    color: #f97316;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #f97316;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.btn-volver:hover { background: #f97316; color: #fff; }
+.volver { text-align: center; margin-top: 30px; }

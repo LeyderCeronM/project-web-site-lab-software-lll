@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #140e17;
+    color: #f3e6f7;
+}
+.encabezado {
+    background-color: #221528;
+    color: #e11d48;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 2px solid #e11d48;
+}
+.contenedor { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.tarjeta-pelicula {
+    background: #2d1b36;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #e11d48;
+}
+.tarjeta-pelicula img {
+    width: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.detalles h2 { color: #f43f5e; margin-top: 0; }
+.btn-volver {
+    color: #e11d48;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #e11d48;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.btn-volver:hover { background: #e11d48; color: #fff; }
+.volver { text-align: center; margin-top: 30px; }
