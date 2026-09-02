@@ -18,9 +18,10 @@ body {
     display: flex;
     overflow: hidden;
     border: 1px solid #f97316;
+    margin-bottom: 20px;
 }
 .plato img { width: 220px; object-fit: cover; }
-.info-plato { padding: 20px; }
+.info-plato { padding: 30px; }
 .info-plato h2 { color: #f97316; margin-top: 0; }
 .btn-volver {
     color: #f97316;
