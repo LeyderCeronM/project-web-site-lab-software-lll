@@ -1,32 +1,58 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #170d1a;
+    font-family: 'Rajdhani', Arial, sans-serif;
+    background-color: #0a0510;
+    background-image:
+        linear-gradient(rgba(217, 70, 239, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(217, 70, 239, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at 75% 25%, rgba(217, 70, 239, 0.2), transparent 45%);
+    background-size: 40px 40px, 40px 40px, cover;
     color: #f5e6fa;
 }
 .encabezado {
-    background-color: #27142d;
+    background-color: rgba(14, 6, 18, 0.75);
+    backdrop-filter: blur(6px);
     color: #d946ef;
     padding: 30px;
     text-align: center;
-    border-bottom: 2px solid #d946ef;
+    border-bottom: 1px solid rgba(217, 70, 239, 0.5);
+    box-shadow: 0 2px 20px rgba(217, 70, 239, 0.25);
+}
+.encabezado h1 {
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 12px rgba(217, 70, 239, 0.7);
 }
 .contenedor { max-width: 900px; margin: 40px auto; padding: 0 20px; }
 .plat-card {
-    background: #391c42;
-    border-radius: 12px;
+    background: rgba(35, 16, 42, 0.6);
+    backdrop-filter: blur(6px);
+    border-radius: 14px;
     padding: 30px;
     border: 1px solid #d946ef;
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.3);
 }
-.plat-card h2 { color: #d946ef; margin-top: 0; }
+.plat-card h2 {
+    color: #d946ef;
+    margin-top: 0;
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(217, 70, 239, 0.5);
+}
 .link-ext { color: #f472b6; font-weight: bold; text-decoration: underline; }
 .btn-volver {
     color: #d946ef;
     text-decoration: none;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     border: 1px solid #d946ef;
     padding: 10px 20px;
     border-radius: 20px;
+    box-shadow: 0 0 10px rgba(217, 70, 239, 0.3);
+    transition: background 0.3s, box-shadow 0.3s, color 0.3s;
 }
-.btn-volver:hover { background: #d946ef; color: #fff; }
+.btn-volver:hover { background: #d946ef; color: #0a0510; box-shadow: 0 0 22px rgba(217, 70, 239, 0.8); }
 .volver { text-align: center; margin-top: 30px; }

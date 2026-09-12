@@ -1,38 +1,69 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #140e17;
+    font-family: 'Rajdhani', Arial, sans-serif;
+    background-color: #0a060c;
+    background-image:
+        linear-gradient(rgba(225, 29, 72, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(225, 29, 72, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, rgba(225, 29, 72, 0.18), transparent 45%);
+    background-size: 40px 40px, 40px 40px, cover;
     color: #f3e6f7;
 }
 .encabezado {
-    background-color: #221528;
+    background-color: rgba(15, 8, 17, 0.75);
+    backdrop-filter: blur(6px);
     color: #e11d48;
     padding: 30px;
     text-align: center;
-    border-bottom: 2px solid #e11d48;
+    border-bottom: 1px solid rgba(225, 29, 72, 0.5);
+    box-shadow: 0 2px 20px rgba(225, 29, 72, 0.25);
+}
+.encabezado h1 {
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 12px rgba(225, 29, 72, 0.7);
 }
 .contenedor { max-width: 900px; margin: 40px auto; padding: 0 20px; }
 .tarjeta-pelicula {
-    background: #2d1b36;
-    border-radius: 12px;
+    background: rgba(30, 15, 36, 0.6);
+    backdrop-filter: blur(6px);
+    border-radius: 14px;
     display: flex;
     gap: 20px;
     padding: 20px;
     border: 1px solid #e11d48;
+    box-shadow: 0 0 18px rgba(225, 29, 72, 0.25);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.tarjeta-pelicula:hover {
+    box-shadow: 0 0 30px rgba(225, 29, 72, 0.55);
+    transform: translateY(-3px);
 }
 .tarjeta-pelicula img {
     width: 200px;
     border-radius: 8px;
     object-fit: cover;
 }
-.detalles h2 { color: #f43f5e; margin-top: 0; }
+.detalles h2 {
+    color: #f43f5e;
+    margin-top: 0;
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(244, 63, 94, 0.5);
+}
 .btn-volver {
     color: #e11d48;
     text-decoration: none;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     border: 1px solid #e11d48;
     padding: 10px 20px;
     border-radius: 20px;
+    box-shadow: 0 0 10px rgba(225, 29, 72, 0.3);
+    transition: background 0.3s, box-shadow 0.3s, color 0.3s;
 }
-.btn-volver:hover { background: #e11d48; color: #fff; }
+.btn-volver:hover { background: #e11d48; color: #0a060c; box-shadow: 0 0 22px rgba(225, 29, 72, 0.8); }
 .volver { text-align: center; margin-top: 30px; }

@@ -1,15 +1,28 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0b131e;
+    font-family: 'Rajdhani', Arial, sans-serif;
+    background-color: #05080a;
+    background-image:
+        linear-gradient(rgba(63, 244, 72, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(63, 244, 72, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at 10% 10%, rgba(63, 244, 72, 0.15), transparent 45%);
+    background-size: 40px 40px, 40px 40px, cover;
     color: #e2e8f0;
 }
 .encabezado {
-    background-color: #111d2c;
+    background-color: rgba(6, 12, 10, 0.75);
+    backdrop-filter: blur(6px);
     color: #f43f5e;
     padding: 30px;
     text-align: center;
-    border-bottom: 2px solid #3ff448;
+    border-bottom: 1px solid rgba(63, 244, 72, 0.4);
+    box-shadow: 0 2px 20px rgba(63, 244, 72, 0.2);
+}
+.encabezado h1 {
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(244, 63, 94, 0.7);
 }
 .contenedor {
     max-width: 900px;
@@ -17,13 +30,19 @@ body {
     padding: 0 20px;
 }
 .tarjeta {
-    background: #162436;
-    border-radius: 12px;
+    background: rgba(15, 30, 24, 0.6);
+    backdrop-filter: blur(6px);
+    border-radius: 14px;
     display: flex;
     overflow: hidden;
     margin-bottom: 25px;
     border: 1px solid #3ff448;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 0 18px rgba(63, 244, 72, 0.25), 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.tarjeta:hover {
+    box-shadow: 0 0 30px rgba(63, 244, 72, 0.55), 0 8px 25px rgba(0, 0, 0, 0.6);
+    transform: translateY(-3px);
 }
 .img-tarjeta {
     width: 250px;
@@ -35,22 +54,30 @@ body {
 .info h2 {
     color: #f43f5e;
     margin-top: 0;
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(244, 63, 94, 0.5);
 }
 .info p {
-    
     line-height: 1.6;
 }
 .btn-volver {
     display: inline-block;
-    color: #f43f5e;
+    color: #3ff448;
     text-decoration: none;
     font-weight: bold;
-    border: 1px solid #f43f5e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #3ff448;
     padding: 10px 20px;
     border-radius: 20px;
+    box-shadow: 0 0 10px rgba(63, 244, 72, 0.3);
+    transition: background 0.3s, box-shadow 0.3s, color 0.3s;
 }
 .btn-volver:hover {
-    background: #f43f5e;
-    color: #fff;
+    background: #3ff448;
+    color: #05080a;
+    box-shadow: 0 0 22px rgba(63, 244, 72, 0.8);
 }
 .volver { text-align: center; margin-top: 30px; }

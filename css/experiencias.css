@@ -1,38 +1,69 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0f172a;
+    font-family: 'Rajdhani', Arial, sans-serif;
+    background-color: #050810;
+    background-image:
+        linear-gradient(rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.18), transparent 45%);
+    background-size: 40px 40px, 40px 40px, cover;
     color: #f8fafc;
 }
 .encabezado {
-    background-color: #1e293b;
+    background-color: rgba(6, 10, 20, 0.75);
+    backdrop-filter: blur(6px);
     color: #38bdf8;
     padding: 30px;
     text-align: center;
-    border-bottom: 2px solid #38bdf8;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.5);
+    box-shadow: 0 2px 20px rgba(56, 189, 248, 0.25);
+}
+.encabezado h1 {
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.7);
 }
 .contenedor { max-width: 900px; margin: 40px auto; padding: 0 20px; }
 .linea-tiempo {
-    border-left: 3px solid #38bdf8;
+    border-left: 2px solid #38bdf8;
+    box-shadow: -2px 0 12px rgba(56, 189, 248, 0.3);
     padding-left: 20px;
     margin-left: 10px;
 }
 .bloque {
-    background: #1e293b;
-    border-radius: 8px;
+    background: rgba(18, 30, 48, 0.55);
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.15);
+    transition: box-shadow 0.3s, transform 0.3s;
 }
-.bloque h3 { color: #38bdf8; margin-top: 0; }
+.bloque:hover {
+    box-shadow: 0 0 26px rgba(56, 189, 248, 0.45);
+    transform: translateY(-3px);
+}
+.bloque h3 {
+    color: #38bdf8;
+    margin-top: 0;
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 .bloque span { color: #94a3b8; font-size: 0.85rem; }
 .btn-volver {
     color: #38bdf8;
     text-decoration: none;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     border: 1px solid #38bdf8;
     padding: 10px 20px;
     border-radius: 20px;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+    transition: background 0.3s, box-shadow 0.3s, color 0.3s;
 }
-.btn-volver:hover { background: #38bdf8; color: #0f172a; }
+.btn-volver:hover { background: #38bdf8; color: #050810; box-shadow: 0 0 22px rgba(56, 189, 248, 0.8); }
 .volver { text-align: center; margin-top: 30px; }
